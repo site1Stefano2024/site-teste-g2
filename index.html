@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central do Cliente - Atendimento e Quitação Veicular</title>
+    <meta name="description" content="Central do Cliente - Sua solução completa para atendimento e quitação veicular. 2ª via de boleto, quitação de parcelas e negociação.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <span>CC</span>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Central do Cliente</h1>
+                        <p>Atendimento Veicular</p>
+                    </div>
+                </div>
+                
+                <nav class="nav desktop-nav">
+                    <a href="#servicos">Serviços</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+                    <button class="btn btn-primary" onclick="openWhatsApp()">
+                        <i class="fas fa-phone"></i>
+                        Falar Conosco
+                    </button>
+                </nav>
+                
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="banner-bg">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="banner-content fade-in">
+                <h1>Central do Cliente</h1>
+                <p class="banner-subtitle">Sua solução completa para atendimento e quitação veicular</p>
+                <p class="banner-description">
+                    Acesse seus boletos, quite suas parcelas e mantenha seu veículo sempre em dia. 
+                    Atendimento especializado e seguro para sua tranquilidade.
+                </p>
+                
+                <div class="banner-buttons">
+                    <button class="btn btn-white" onclick="openWhatsApp()">
+                        Falar com Atendimento
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-outline">Conhecer Serviços</button>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item slide-up" style="animation-delay: 0.2s;">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>100% Seguro</h3>
+                        <p>Transações protegidas e criptografadas</p>
+                    </div>
+                    
+                    <div class="stat-item slide-up" style="animation-delay: 0.4s;">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>24h Disponível</h3>
+                        <p>Atendimento e serviços a qualquer hora</p>
+                    </div>
+                    
+                    <div class="stat-item slide-up" style="animation-delay: 0.6s;">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>50mil+ Clientes</h3>
+                        <p>Confiança de milhares de pessoas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos soluções completas para suas necessidades veiculares. Escolha o serviço que precisa e seja atendido imediatamente.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card slide-up" style="animation-delay: 0.1s;">
+                    <div class="service-icon blue">
+                        <i class="fas fa-file-text"></i>
+                    </div>
+                    <h3>2ª Via de Boleto</h3>
+                    <p>Emita a segunda via dos seus boletos de forma rápida e segura</p>
+                    <button class="btn btn-primary" onclick="openWhatsAppService('Olá! Preciso da 2ª via do meu boleto. Podem me ajudar?')">
+                        Selecionar
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card slide-up" style="animation-delay: 0.2s;">
+                    <div class="service-icon green">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Atendimento Personalizado</h3>
+                    <p>Suporte especializado para todas suas dúvidas e necessidades</p>
+                    <button class="btn btn-primary" onclick="openWhatsAppService('Olá! Gostaria de falar com o atendimento para esclarecer algumas dúvidas.')">
+                        Selecionar
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card slide-up" style="animation-delay: 0.3s;">
+                    <div class="service-icon purple">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Quitar Parcela</h3>
+                    <p>Quite suas parcelas de forma prática e sem complicações</p>
+                    <button class="btn btn-primary" onclick="openWhatsAppService('Olá! Quero quitar uma parcela do meu veículo. Como proceder?')">
+                        Selecionar
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="service-card slide-up" style="animation-delay: 0.4s;">
+                    <div class="service-icon red">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Parcelas em Atraso</h3>
+                    <p>Regularize sua situação e negocie suas parcelas em atraso</p>
+                    <button class="btn btn-primary" onclick="openWhatsAppService('Olá! Tenho parcelas em atraso e gostaria de negociar. Podem me ajudar?')">
+                        Selecionar
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="info-section fade-in">
+                <div class="info-content">
+                    <div class="info-text">
+                        <h3>Por que escolher a Central do Cliente?</h3>
+                        <ul>
+                            <li><span class="bullet"></span>Atendimento humanizado e personalizado</li>
+                            <li><span class="bullet"></span>Processo 100% digital e seguro</li>
+                            <li><span class="bullet"></span>Respostas rápidas via WhatsApp</li>
+                            <li><span class="bullet"></span>Facilidade para negociação</li>
+                        </ul>
+                    </div>
+                    <div class="info-stats">
+                        <div class="stat-box">
+                            <h4>+50.000</h4>
+                            <p>Clientes Atendidos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Sobre a Central do Cliente</h2>
+                <p>Somos especializados em atendimento e quitação veicular, oferecendo soluções digitais e humanizadas para facilitar sua vida financeira.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item slide-up" style="animation-delay: 0.1s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Missão</h3>
+                    <p>Facilitar o relacionamento entre cliente e financeira, oferecendo soluções práticas e eficientes para quitação veicular.</p>
+                </div>
+
+                <div class="feature-item slide-up" style="animation-delay: 0.2s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Valores</h3>
+                    <p>Transparência, agilidade e compromisso com a satisfação do cliente em todos os nossos atendimentos.</p>
+                </div>
+
+                <div class="feature-item slide-up" style="animation-delay: 0.3s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Qualidade</h3>
+                    <p>Excelência no atendimento com processos certificados e equipe especializada em soluções financeiras.</p>
+                </div>
+
+                <div class="feature-item slide-up" style="animation-delay: 0.4s;">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Resultados</h3>
+                    <p>Mais de 50.000 clientes atendidos com sucesso, mantendo altos índices de satisfação e resolução.</p>
+                </div>
+            </div>
+
+            <div class="about-highlight fade-in">
+                <div class="highlight-content">
+                    <div class="highlight-text">
+                        <h3>Transformando o atendimento veicular</h3>
+                        <p>Nossa plataforma foi desenvolvida pensando na praticidade e segurança que você precisa. Com anos de experiência no mercado, oferecemos as melhores soluções para quitação e atendimento veicular.</p>
+                        <ul>
+                            <li><span class="bullet"></span>Tecnologia de ponta em segurança digital</li>
+                            <li><span class="bullet"></span>Equipe especializada em atendimento</li>
+                            <li><span class="bullet"></span>Processos otimizados para sua comodidade</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-stats">
+                        <div class="stat-mini">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Satisfação</div>
+                        </div>
+                        <div class="stat-mini">
+                            <div class="stat-number">24h</div>
+                            <div class="stat-label">Disponibilidade</div>
+                        </div>
+                        <div class="stat-mini">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Anos Mercado</div>
+                        </div>
+                        <div class="stat-mini">
+                            <div class="stat-number">50k+</div>
+                            <div class="stat-label">Clientes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Entre em Contato</h2>
+                <p>Estamos sempre prontos para atender você. Escolha a forma de contato que preferir e fale conosco agora mesmo.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card slide-up" style="animation-delay: 0.1s;">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Ligar</h3>
+                    <p class="contact-info">(19) 3278-4214</p>
+                    <span class="contact-desc">Atendimento via telefone</span>
+                </div>
+
+                <div class="contact-card slide-up" style="animation-delay: 0.2s;">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Enviar e-mail</h3>
+                    <p class="contact-info">marlenecaminas@uol.com.br</p>
+                    <span class="contact-desc">Suporte por e-mail</span>
+                </div>
+
+                <div class="contact-card slide-up" style="animation-delay: 0.3s;">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Localização</h3>
+                    <p class="contact-info">Rua Carlos Gabetta, 329</p>
+                    <span class="contact-desc">
+Bairro: Jardim Jurema
+
+CEP: 13272-476
+
+Município: Valinhos
+
+Estado: São Paulo</span>
+                </div>
+
+                <div class="contact-card slide-up" style="animation-delay: 0.4s;">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Horário</h3>
+                    <p class="contact-info">24h por dia</p>
+                    <span class="contact-desc">7 dias por semana</span>
+                </div>
+            </div>
+
+            <div class="whatsapp-cta fade-in">
+                <div class="whatsapp-content">
+                    <div class="whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Atendimento Instantâneo via WhatsApp</h3>
+                    <p>Para um atendimento mais rápido e personalizado, entre em contato conosco através do WhatsApp. Nossa equipe está pronta para ajudar você!</p>
+                    <button class="btn btn-whatsapp" onclick="openWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        Conversar no WhatsApp
+                    </button>
+                    <small>Resposta em até 5 minutos • Atendimento humanizado • 100% gratuito</small>
+                </div>
+            </div>
+
+            <div class="faq-links">
+                <div class="faq-item slide-up" style="animation-delay: 0.2s;">
+                    <h4>Dúvidas Frequentes</h4>
+                    <p>Como emitir 2ª via, formas de pagamento e prazos</p>
+                    <button class="btn btn-outline" onclick="openWhatsApp()">Selecionar</button>
+                </div>
+
+                <div class="faq-item slide-up" style="animation-delay: 0.4s;">
+                    <h4>Negociação</h4>
+                    <p>Renegociação de parcelas e condições especiais</p>
+                    <button class="btn btn-outline" onclick="openWhatsApp()">Selecionar</button>
+                </div>
+
+                <div class="faq-item slide-up" style="animation-delay: 0.6s;">
+                    <h4>Suporte Técnico</h4>
+                    <p>Problemas com pagamentos ou acesso ao sistema</p>
+                    <button class="btn btn-outline" onclick="openWhatsApp()">Selecionar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section fade-in">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <span>CC</span>
+                        </div>
+                        <div class="logo-text">
+                            <h3>Central do Cliente</h3>
+                            <p>Atendimento Veicular</p>
+                        </div>
+                    </div>
+                    <p>Sua solução completa para atendimento e quitação veicular. Facilitamos sua vida com processos digitais e atendimento humanizado.</p>
+                    <div class="footer-love">
+                        <i class="fas fa-heart"></i>
+                        Feito com amor para nossos clientes
+                    </div>
+                </div>
+
+                <div class="footer-section slide-up" style="animation-delay: 0.1s;">
+                    <h4>Nossos Serviços</h4>
+                    <ul>
+                        <li><a href="#" onclick="openWhatsApp()">2ª Via de Boleto</a></li>
+                        <li><a href="#" onclick="openWhatsApp()">Atendimento Personalizado</a></li>
+                        <li><a href="#" onclick="openWhatsApp()">Quitar Parcela</a></li>
+                        <li><a href="#" onclick="openWhatsApp()">Parcelas em Atraso</a></li>
+                        <li><a href="#" onclick="openWhatsApp()">Negociação</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section slide-up" style="animation-delay: 0.2s;">
+                    <h4>Contato</h4>
+                    <div class="contact-info-footer">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(19) 3278-4214 (Ligar)</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>marlenecaminas@uol.com.br</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Logradouro: Rua Carlos Gabetta, 329 <br> Bairro: Jardim Jurema 13272-476 <br> Município: Valinhos Estado: São Paulo</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>24h por dia, 7 dias por semana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section slide-up" style="animation-delay: 0.3s;">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#" onclick="openWhatsApp()">Atendimento WhatsApp</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p style="text-align: center;">CNPJ: 28.585.832/0001-36</p>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" onclick="openWhatsApp()">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Fale conosco no WhatsApp</div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
